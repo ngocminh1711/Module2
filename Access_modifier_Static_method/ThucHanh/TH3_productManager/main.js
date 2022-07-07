@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var Product_1 = require("./Product");
+var productManager_1 = require("./productManager");
+var laptop = new Product_1.Product("Laptop", 20000000);
+var iphone = new Product_1.Product("Iphone", 17000000);
+var productmanager = new productManager_1.ProductManager();
+productmanager.add(laptop);
+productmanager.add(iphone);
+console.log(productmanager.getAll());
