@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var Point2D_1 = require("./Point2D");
+var Point3D_1 = require("./Point3D");
+var point2d = new Point2D_1.Point2D(10, 10);
+var point3d = new Point3D_1.Point3D(20, 20, 20);
+console.log(point2d.getXY());
+console.log(point3d.getXYZ());
+point2d.setXY(30, 30);
+console.log(point2d.getXY());
+point3d.setXYZ(100, 100, 100);
+console.log(point3d.getXYZ());
