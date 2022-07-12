@@ -15,32 +15,18 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-exports.Point3D = void 0;
-var Point2D_1 = require("./Point2D");
-var Point3D = /** @class */ (function (_super) {
-    __extends(Point3D, _super);
-    function Point3D(x, y, z) {
-        var _this = _super.call(this, x, y) || this;
-        _this.z = z;
+exports.Cylinder = void 0;
+var Circle_1 = require("./Circle");
+var Cylinder = /** @class */ (function (_super) {
+    __extends(Cylinder, _super);
+    function Cylinder(radius, color, height) {
+        var _this = _super.call(this, radius, color) || this;
+        _this.height = height;
         return _this;
     }
-    Point3D.prototype.getZ = function () {
-        return this.z;
+    Cylinder.prototype.getVolume = function () {
+        return this.height * this.getArea();
     };
-    Point3D.prototype.setZ = function (z) {
-        this.z = z;
-    };
-    Point3D.prototype.getXYZ = function () {
-        return {
-            x: _super.prototype.getX.call(this),
-            y: _super.prototype.getY.call(this),
-            z: this.z
-        };
-    };
-    Point3D.prototype.setXYZ = function (x, y, z) {
-        this.setXY(x, y);
-        this.z = z;
-    };
-    return Point3D;
-}(Point2D_1.Point2D));
-exports.Point3D = Point3D;
+    return Cylinder;
+}(Circle_1.Circle));
+exports.Cylinder = Cylinder;

@@ -18,8 +18,8 @@ export class Point3D extends Point2D {
 
     getXYZ(): object  {
         return {
-                x: this.getX(),
-                y: this.getY(),
+                x: super.getX(),
+                y: super.getY(),
                 z: this.z
         }
 
