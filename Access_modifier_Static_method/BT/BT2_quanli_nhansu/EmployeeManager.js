@@ -10,23 +10,23 @@ var EmployeeManager = /** @class */ (function () {
     EmployeeManager.prototype.addEmmployee = function (employee) {
         EmployeeManager.employees.push(employee);
     };
-    EmployeeManager.prototype["delete"] = function (id) {
-        var indexEmployeeDelete = this.findID(id);
-        if (indexEmployeeDelete !== -1) {
-            EmployeeManager.employees.splice(indexEmployeeDelete, 1);
-        }
-        else {
-            throw new Error('delete error');
-        }
-    };
-    EmployeeManager.prototype.findID = function (id) {
-        var i = -1;
+    EmployeeManager.prototype["delete"] = function (lastname) {
         EmployeeManager.employees.forEach(function (employee, index) {
-            if (employee.id === id) {
-                i = index;
+            if (employee.getLastName() === lastname) {
+                EmployeeManager.employees.splice(index, 1);
             }
         });
-        return i;
+    };
+    EmployeeManager.prototype.update = function (firstname, lastname, birthday, address, position, id) {
+        EmployeeManager.employees.forEach(function (employee, index) {
+            if (employee.id === id) {
+                employee.setFirstName(firstname);
+                employee.setLastName(lastname);
+                employee.setBirthday(birthday);
+                employee.setAddress(address);
+                employee.setPosition(position);
+            }
+        });
     };
     EmployeeManager.employees = [];
     return EmployeeManager;

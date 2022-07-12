@@ -1,33 +1,43 @@
 import {Employee} from "./Employee";
 
 export class EmployeeManager {
-    static employees : Employee[] = [];
-    constructor(){
+    static employees: Employee[] = [];
+
+    constructor() {
 
     }
-    getInfo() :Employee[] {
+
+    getInfo(): Employee[] {
         return EmployeeManager.employees;
     }
-    addEmmployee(employee: Employee) :void {
+
+    addEmmployee(employee: Employee): void {
         EmployeeManager.employees.push(employee);
     }
-    delete(id: string):void {
-        let indexEmployeeDelete = this.findID(id)
-        if (indexEmployeeDelete !== -1) {
-            EmployeeManager.employees.splice(indexEmployeeDelete, 1);
-        } else {
-            throw new Error ('delete error')
-        }
+
+    delete(lastname: string): void {
+        EmployeeManager.employees.forEach((employee, index) => {
+            if (employee.getLastName() === lastname) {
+                EmployeeManager.employees.splice(index, 1)
+            }
+        })
+
     }
-    update()
-    findID(id: string) {
-    let i = -1;
-    EmployeeManager.employees.forEach((employee,index) =>{
-        if(employee.id === id) {
-            i = index;
-        }
-    })
-    return i;
+    update (firstname: string,
+            lastname: string,
+            birthday: string,
+            address: string,
+            position: string,
+            id : string): void {
+     EmployeeManager.employees.forEach((employee, index) => {
+         if (employee.id === id) {
+             employee.setFirstName(firstname);
+             employee.setLastName(lastname);
+             employee.setBirthday(birthday);
+             employee.setAddress(address);
+             employee.setPosition(position);
+         }
+     })
     }
 }
 

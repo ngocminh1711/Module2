@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var Staff_1 = require("./Staff");
+var StaffManager_1 = require("./StaffManager");
+var staff1 = new Staff_1.Staff('Ngo Minh Ngoc', true, '17/11/1993', 'ngocskit@gmail.com', '0347990886');
+var staff2 = new Staff_1.Staff('Tan Hoang Minh', true, '20/10/1995', 'tan@gmail.com', '0124511');
+var staffManager = new StaffManager_1.StaffManager();
+staffManager.addStaff(staff1);
+staffManager.addStaff(staff2);
+console.log(staffManager.getInfo());
+staffManager.removeStaff('Ngo Minh Ngoc');
+console.log(staffManager.getInfo());
