@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var TennisGame_1 = require("./TennisGame");
+var Player_1 = require("./Player");
+var playerOne = new Player_1.Player('playerOne', 6);
+var playerTwo = new Player_1.Player('playerTwo', 8);
+console.log(playerOne);
+var tennisGame = new TennisGame_1.TennisGame();
+tennisGame.getScoreGame(playerOne.getScore(), playerTwo.getScore());
+console.log(tennisGame);
