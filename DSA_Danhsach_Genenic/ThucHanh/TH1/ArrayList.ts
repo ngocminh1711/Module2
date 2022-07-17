@@ -1,4 +1,4 @@
-import {IArrayList} from "../IArrayList";
+import {IArrayList} from "./IArrayList";
 
 export class ArrayList<T> implements IArrayList<T> {
     container: Array<T>;

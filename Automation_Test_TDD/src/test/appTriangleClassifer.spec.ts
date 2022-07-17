@@ -51,7 +51,7 @@ describe("TriangleClassifier", () => {
 
     });
 
-    test("isTriangle", () => {
+    test("isEquilateralTriangle", () => {
         let sideA = 2;
         let sideB = 2;
         let sideC = 2;
@@ -64,7 +64,7 @@ describe("TriangleClassifier", () => {
 
     });
 
-    test("isTriangle", () => {
+    test("isIsoscelesTriangle", () => {
         let sideA = 2;
         let sideB = 2;
         let sideC = 3;
@@ -76,12 +76,24 @@ describe("TriangleClassifier", () => {
 
 
     });
-    test("isTriangle", () => {
+    test("isRightTriangle", () => {
         let sideA = 3;
         let sideB = 4;
         let sideC = 5;
 
         let message = "Là tam giác vuông";
+        let triangle = new TriangleClassifier();
+
+        expect(triangle.isTriangle(sideA, sideB, sideC)).toEqual(message);
+
+
+    });
+    test("isRightIsoscelesTriangle", () => {
+        let sideA = 2;
+        let sideB = 2;
+        let sideC = Math.sqrt(8);
+
+        let message = "Là tam giác vuông cân";
         let triangle = new TriangleClassifier();
 
         expect(triangle.isTriangle(sideA, sideB, sideC)).toEqual(message);
