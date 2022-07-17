@@ -1,18 +1,18 @@
-import {StudentScoreManagement} from "./StudentScoreManagement";
+import {PriorityQueue} from "./PriorityQueue";
 
-let studentList = new StudentScoreManagement();
-studentList.insertFirst('Ngo Minh Ngoc',6);
-studentList.insertFirst('Pham Thanh Thao',10);
-studentList.insertLast('Tan',10)
-studentList.insertFirst('Tan',8)
+let priority = new PriorityQueue();
+let priority1 = new PriorityQueue();
+priority.enqueue('Ngoc',1);
+priority.enqueue('Minh',2);
+// console.log(priority);
 
-console.log(studentList.showList())
-console.log(studentList.getSize())
-console.log('---Số lượng học sinh dưới 5 điểm là---')
-console.log(studentList.totalStudentFail())
-console.log('--------')
-console.log(studentList.findMaxScore())
-console.log('--------')
-studentList.listStudentMaxScore()
-console.log('---------')
-studentList.findByName('Tan')
+priority.enqueue('Ngo',3);
+priority.enqueue('Thao',4);
+console.log(priority);
+priority.dequeue()
+console.log(priority);
+// console.log(priority.dequeue());
+// //
+// // console.log(priority1)
+console.log(priority.dequeue());
+

@@ -62,12 +62,12 @@ var StudentScoreManagement = /** @class */ (function () {
     };
     StudentScoreManagement.prototype.findMaxScore = function () {
         var currentNode = this.head;
-        var max = currentNode.getScore();
-        for (var i = 0; i < this.studentList.length; i++) {
-            if (currentNode.next.getScore() > max) {
-                max = currentNode.next.getScore();
-                currentNode = currentNode.next;
+        var max = 0;
+        while (currentNode !== null) {
+            if (max < currentNode.getScore()) {
+                max = currentNode.getScore();
             }
+            currentNode = currentNode.next;
         }
         return max;
     };

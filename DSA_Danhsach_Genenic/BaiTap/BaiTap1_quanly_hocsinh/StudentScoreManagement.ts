@@ -75,12 +75,12 @@ export class StudentScoreManagement<T> {
 
     findMaxScore(): number {
         let currentNode = this.head;
-        let max = currentNode.getScore();
-        for (let i = 0; i < this.studentList.length; i++) {
-            if (currentNode.next.getScore() > max) {
-                max = currentNode.next.getScore();
-                currentNode = currentNode.next;
+        let max = 0
+        while (currentNode !== null) {
+            if (max < currentNode.getScore()) {
+                max = currentNode.getScore()
             }
+            currentNode = currentNode.next;
         }
         return max;
     }

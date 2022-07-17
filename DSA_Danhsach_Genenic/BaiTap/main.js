@@ -1,18 +1,17 @@
 "use strict";
 exports.__esModule = true;
-var StudentScoreManagement_1 = require("./StudentScoreManagement");
-var studentList = new StudentScoreManagement_1.StudentScoreManagement();
-studentList.insertFirst('Ngo Minh Ngoc', 6);
-studentList.insertFirst('Pham Thanh Thao', 10);
-studentList.insertLast('Tan', 10);
-studentList.insertFirst('Tan', 8);
-console.log(studentList.showList());
-console.log(studentList.getSize());
-console.log('---Số lượng học sinh dưới 5 điểm là---');
-console.log(studentList.totalStudentFail());
-console.log('--------');
-console.log(studentList.findMaxScore());
-console.log('--------');
-studentList.listStudentMaxScore();
-console.log('---------');
-studentList.findByName('Tan');
+var PriorityQueue_1 = require("./PriorityQueue");
+var priority = new PriorityQueue_1.PriorityQueue();
+var priority1 = new PriorityQueue_1.PriorityQueue();
+priority.enqueue('Ngoc', 1);
+priority.enqueue('Minh', 2);
+// console.log(priority);
+priority.enqueue('Ngo', 3);
+priority.enqueue('Thao', 4);
+console.log(priority);
+priority.dequeue();
+console.log(priority);
+// console.log(priority.dequeue());
+// //
+// // console.log(priority1)
+console.log(priority.dequeue());
