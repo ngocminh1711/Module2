@@ -1,3 +1,4 @@
+"use strict";
 // let numbers: number[] = [1, 2, 3, 4]
 // console.log(numbers[0])
 // const arr_names: number[] = new Array(4);
@@ -10,38 +11,37 @@
 // for (let j =0; j < nums.length; j++) {
 //     console.log(nums[j])
 // }
-var Rectangle = /** @class */ (function () {
-    function Rectangle(width, height) {
+class Rectangle {
+    constructor(width, height) {
         this.width = width;
         this.height = height;
     }
-    Rectangle.prototype.setWidth = function (width) {
+    setWidth(width) {
         this.width = width;
-    };
-    Rectangle.prototype.setHeight = function (height) {
+    }
+    setHeight(height) {
         this.height = height;
-    };
-    Rectangle.prototype.getPerimeter = function () {
-        return "Chu vi l\u00E0 ".concat(2 * (this.width + this.height));
-    };
-    Rectangle.prototype.getArea = function () {
-        return "Di\u1EC7n t\u00EDch l\u00E0  ".concat((this.width * this.height));
-    };
-    Rectangle.prototype.display = function () {
-        var rec = [];
-        for (var i = 0; i < this.width; i++) {
+    }
+    getPerimeter() {
+        return `Chu vi là ${2 * (this.width + this.height)}`;
+    }
+    getArea() {
+        return `Diện tích là  ${(this.width * this.height)}`;
+    }
+    display() {
+        let rec = [];
+        for (let i = 0; i < this.width; i++) {
             rec[i] = [];
             // console.log("*")
-            for (var j = 0; j < this.height; j++) {
+            for (let j = 0; j < this.height; j++) {
                 rec[i][j] = '*';
                 // console.log("*")
             }
         }
         console.log(rec);
-    };
-    return Rectangle;
-}());
-var rectangle = new Rectangle(3, 5);
+    }
+}
+let rectangle = new Rectangle(3, 5);
 rectangle.display();
 console.log(rectangle.getArea());
 console.log(rectangle.getPerimeter());

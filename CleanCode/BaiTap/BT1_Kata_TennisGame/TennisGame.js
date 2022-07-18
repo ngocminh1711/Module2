@@ -1,12 +1,12 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.TennisGame = void 0;
-var TennisGame = /** @class */ (function () {
-    function TennisGame() {
+class TennisGame {
+    constructor() {
         this.score = '';
     }
-    TennisGame.prototype.getScoreGame = function (scorePlayerOne, scorePlayerTwo) {
-        var tempScore = 0;
+    getScoreGame(scorePlayerOne, scorePlayerTwo) {
+        let tempScore = 0;
         if (scorePlayerOne == scorePlayerTwo) {
             this.checkDraw(scorePlayerOne);
         }
@@ -16,9 +16,9 @@ var TennisGame = /** @class */ (function () {
         else {
             this.checkScore(tempScore, scorePlayerOne, scorePlayerTwo);
         }
-    };
-    TennisGame.prototype.checkScore = function (tempScore, scorePlayerOne, scorePlayerTwo) {
-        for (var i = 1; i < 3; i++) {
+    }
+    checkScore(tempScore, scorePlayerOne, scorePlayerTwo) {
+        for (let i = 1; i < 3; i++) {
             if (i == 1)
                 tempScore = scorePlayerOne;
             else {
@@ -40,8 +40,8 @@ var TennisGame = /** @class */ (function () {
                     break;
             }
         }
-    };
-    TennisGame.prototype.checkDraw = function (scorePlayerOne) {
+    }
+    checkDraw(scorePlayerOne) {
         switch (scorePlayerOne) {
             case 0:
                 this.score = "Love-All";
@@ -59,9 +59,9 @@ var TennisGame = /** @class */ (function () {
                 this.score = "Deuce";
                 break;
         }
-    };
-    TennisGame.prototype.checkWin = function (scorePlayerOne, scorePlayerTwo) {
-        var minusResult = scorePlayerOne - scorePlayerTwo;
+    }
+    checkWin(scorePlayerOne, scorePlayerTwo) {
+        let minusResult = scorePlayerOne - scorePlayerTwo;
         if (minusResult == 1)
             this.score = "Advantage player1";
         else if (minusResult == -1)
@@ -70,7 +70,6 @@ var TennisGame = /** @class */ (function () {
             this.score = "Win for player1";
         else
             this.score = "Win for player2";
-    };
-    return TennisGame;
-}());
+    }
+}
 exports.TennisGame = TennisGame;

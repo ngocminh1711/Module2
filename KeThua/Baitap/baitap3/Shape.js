@@ -1,11 +1,10 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Shape = void 0;
-var Shape = /** @class */ (function () {
-    function Shape(name, color) {
+class Shape {
+    constructor(name, color) {
         this.name = name;
         this.color = color;
     }
-    return Shape;
-}());
+}
 exports.Shape = Shape;

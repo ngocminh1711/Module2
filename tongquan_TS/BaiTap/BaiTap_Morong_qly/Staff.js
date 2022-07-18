@@ -1,39 +1,38 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Staff = void 0;
-var Staff = /** @class */ (function () {
-    function Staff(name, gender, birthday, email, phoneNumber) {
+class Staff {
+    constructor(name, gender, birthday, email, phoneNumber) {
         this.name = name;
         this.gender = gender;
         this.birthday = birthday;
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
-    Staff.prototype.getName = function () {
+    getName() {
         return this.name;
-    };
-    Staff.prototype.getGender = function () {
+    }
+    getGender() {
         return this.gender;
-    };
-    Staff.prototype.getBirthday = function () {
+    }
+    getBirthday() {
         return this.birthday;
-    };
-    Staff.prototype.getEmail = function () {
+    }
+    getEmail() {
         return this.email;
-    };
-    Staff.prototype.getphoneNumber = function () {
+    }
+    getphoneNumber() {
         return this.phoneNumber;
-    };
-    Staff.prototype.checkGender = function (gender) {
-        var male = true;
-        var female = false;
+    }
+    checkGender(gender) {
+        let male = true;
+        let female = false;
         if (gender === male) {
             console.log("Gender is male");
         }
         else if (gender === female) {
             console.log("Gender is female");
         }
-    };
-    return Staff;
-}());
+    }
+}
 exports.Staff = Staff;

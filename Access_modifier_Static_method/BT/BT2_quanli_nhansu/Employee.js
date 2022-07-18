@@ -1,8 +1,8 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Employee = void 0;
-var Employee = /** @class */ (function () {
-    function Employee(firstname, lastname, birthday, address, position, id) {
+class Employee {
+    constructor(firstname, lastname, birthday, address, position, id) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.birthday = birthday;
@@ -10,42 +10,41 @@ var Employee = /** @class */ (function () {
         this.position = position;
         this.id = id;
     }
-    Employee.prototype.setFirstName = function (firstname) {
+    setFirstName(firstname) {
         this.firstname = firstname;
-    };
-    Employee.prototype.setLastName = function (lastname) {
+    }
+    setLastName(lastname) {
         this.lastname = lastname;
-    };
-    Employee.prototype.setBirthday = function (birthday) {
+    }
+    setBirthday(birthday) {
         this.birthday = birthday;
-    };
-    Employee.prototype.setAddress = function (address) {
+    }
+    setAddress(address) {
         this.address = address;
-    };
-    Employee.prototype.setPosition = function (position) {
+    }
+    setPosition(position) {
         this.position = position;
-    };
-    Employee.prototype.setID = function (id) {
+    }
+    setID(id) {
         this.id = id;
-    };
-    Employee.prototype.getLastName = function () {
+    }
+    getLastName() {
         return this.lastname;
-    };
-    Employee.prototype.getFirstName = function () {
+    }
+    getFirstName() {
         return this.firstname;
-    };
-    Employee.prototype.getBirthday = function () {
+    }
+    getBirthday() {
         return this.birthday;
-    };
-    Employee.prototype.getAddress = function () {
+    }
+    getAddress() {
         return this.address;
-    };
-    Employee.prototype.getPosition = function () {
+    }
+    getPosition() {
         return this.position;
-    };
-    Employee.prototype.getID = function (id) {
+    }
+    getID(id) {
         return this.id;
-    };
-    return Employee;
-}());
+    }
+}
 exports.Employee = Employee;

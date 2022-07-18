@@ -1,16 +1,15 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProductManager = void 0;
-var ProductManager = /** @class */ (function () {
-    function ProductManager() {
+class ProductManager {
+    constructor() {
         this.products = [];
     }
-    ProductManager.prototype.getAll = function () {
+    getAll() {
         return this.products;
-    };
-    ProductManager.prototype.add = function (product) {
+    }
+    add(product) {
         this.products.push(product);
-    };
-    return ProductManager;
-}());
+    }
+}
 exports.ProductManager = ProductManager;

@@ -1,7 +1,7 @@
 "use strict";
-exports.__esModule = true;
-var StudentScoreManagement_1 = require("./StudentScoreManagement");
-var studentList = new StudentScoreManagement_1.StudentScoreManagement();
+Object.defineProperty(exports, "__esModule", { value: true });
+const StudentScoreManagement_1 = require("./StudentScoreManagement");
+let studentList = new StudentScoreManagement_1.StudentScoreManagement();
 studentList.insertFirst('Ngo Minh Ngoc', 10);
 studentList.insertFirst('Pham Thanh Thao', 10);
 studentList.insertLast('Tan', 9);

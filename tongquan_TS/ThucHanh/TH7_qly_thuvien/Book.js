@@ -1,20 +1,19 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Book = void 0;
-var Book = /** @class */ (function () {
-    function Book(id, name) {
+class Book {
+    constructor(id, name) {
         this.id = id;
         this.name = name;
     }
-    Book.prototype.getName = function () {
+    getName() {
         return this.name;
-    };
-    Book.prototype.setName = function (name) {
+    }
+    setName(name) {
         this.name = name;
-    };
-    Book.prototype.getID = function () {
+    }
+    getID() {
         return this.id;
-    };
-    return Book;
-}());
+    }
+}
 exports.Book = Book;

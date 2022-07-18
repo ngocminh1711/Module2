@@ -1,69 +1,69 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.StaffManager = void 0;
-var Node_1 = require("../BaiTap2_quanly_luong_nhanvien/Node");
-var StaffManager = /** @class */ (function () {
-    function StaffManager() {
+const Node_1 = require("../BaiTap2_quanly_luong_nhanvien/Node");
+class StaffManager {
+    constructor() {
         this.staffList = [];
         this.head = null;
         this.tail = null;
         this.size = 0;
     }
-    StaffManager.prototype.insertFirst = function (month, money) {
-        var node = new Node_1.Node(month, money);
+    insertFirst(month, money) {
+        let node = new Node_1.Node(month, money);
         node.next = this.head;
         this.head = node;
         if (!this.tail) {
             this.tail = node;
         }
         this.size++;
-    };
-    StaffManager.prototype.insertLast = function (month, money) {
+    }
+    insertLast(month, money) {
         if (!this.head) {
             this.insertFirst(month, money);
         }
         else {
-            var node = new Node_1.Node(month, money);
+            let node = new Node_1.Node(month, money);
             this.tail.next = node;
             this.tail = node;
             this.size++;
         }
-    };
-    StaffManager.prototype.getSize = function () {
+    }
+    getSize() {
         return this.size;
-    };
-    StaffManager.prototype.readList = function () {
-        var listData = [];
-        var currentNode = this.head;
+    }
+    readList() {
+        let listData = [];
+        let currentNode = this.head;
         while (currentNode != null) {
             listData.push(currentNode.readData());
             currentNode = currentNode.next;
         }
         return listData;
-    };
-    StaffManager.prototype.sumMoney = function () {
-        var sum = 0;
-        var currentNode = this.head;
-        for (var i = 0; i < this.size; i++) {
+    }
+    sumMoney() {
+        let sum = 0;
+        let currentNode = this.head;
+        for (let i = 0; i < this.size; i++) {
             sum += currentNode.getMoney();
             currentNode = currentNode.next;
         }
         return sum;
-    };
-    StaffManager.prototype.findMonthHasMoneyHigher = function () {
-        var currentNode = this.head;
-        for (var i = 0; i < this.size; i++) {
+    }
+    findMonthHasMoneyHigher() {
+        let currentNode = this.head;
+        for (let i = 0; i < this.size; i++) {
             if (this.findMaxMoney() === currentNode.getMoney()) {
                 return currentNode.getMonth();
             }
             currentNode = currentNode.next;
         }
-    };
-    StaffManager.prototype.findMaxMoney = function () {
-        var currentNode = this.head;
-        var max = 0;
+    }
+    findMaxMoney() {
+        let currentNode = this.head;
+        let max = 0;
         while (currentNode != null) {
-            for (var i = 0; i < this.size; i++) {
+            for (let i = 0; i < this.size; i++) {
                 if (currentNode.getMoney() > max) {
                     max = currentNode.getMoney();
                 }
@@ -71,7 +71,6 @@ var StaffManager = /** @class */ (function () {
             }
         }
         return max;
-    };
-    return StaffManager;
-}());
+    }
+}
 exports.StaffManager = StaffManager;

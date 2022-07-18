@@ -1,10 +1,8 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Calculator = void 0;
-var Calculator = /** @class */ (function () {
-    function Calculator() {
-    }
-    Calculator.calculate = function (firstOperand, secondOperand, operator) {
+class Calculator {
+    static calculate(firstOperand, secondOperand, operator) {
         switch (operator) {
             case this.ADDITION:
                 return firstOperand + secondOperand;
@@ -20,11 +18,10 @@ var Calculator = /** @class */ (function () {
             default:
                 console.log("Unsupported operation");
         }
-    };
-    Calculator.SUBTRACTION = '-';
-    Calculator.ADDITION = '+';
-    Calculator.MULTIPLICATION = '*';
-    Calculator.DIVISION = '/';
-    return Calculator;
-}());
+    }
+}
 exports.Calculator = Calculator;
+Calculator.SUBTRACTION = '-';
+Calculator.ADDITION = '+';
+Calculator.MULTIPLICATION = '*';
+Calculator.DIVISION = '/';

@@ -1,14 +1,13 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Player = void 0;
-var Player = /** @class */ (function () {
-    function Player(name, score) {
+class Player {
+    constructor(name, score) {
         this.name = name;
         this.score = score;
     }
-    Player.prototype.getScore = function () {
+    getScore() {
         return this.score;
-    };
-    return Player;
-}());
+    }
+}
 exports.Player = Player;

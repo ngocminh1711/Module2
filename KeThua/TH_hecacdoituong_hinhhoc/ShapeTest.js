@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
-var Shape_1 = require("./Shape");
-var shape = new Shape_1.Shape("red", true);
+Object.defineProperty(exports, "__esModule", { value: true });
+const Shape_1 = require("./Shape");
+let shape = new Shape_1.Shape("red", true);
 console.log(shape);

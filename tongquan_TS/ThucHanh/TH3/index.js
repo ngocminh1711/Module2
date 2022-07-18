@@ -1,12 +1,13 @@
+"use strict";
 function main() {
-    var message;
-    var total = 100;
-    var isProduction = true;
-    var prices = [120, 88, 60];
-    var languages = ['vi', 'en-us'];
-    var now = new Date();
-    var unknown;
-    var Direction;
+    let message;
+    let total = 100;
+    let isProduction = true;
+    let prices = [120, 88, 60];
+    let languages = ['vi', 'en-us'];
+    let now = new Date();
+    let unknown;
+    let Direction;
     (function (Direction) {
         Direction[Direction["UP"] = 0] = "UP";
         Direction[Direction["DOWN"] = 1] = "DOWN";
@@ -20,7 +21,7 @@ function main() {
     isProduction = false;
     unknown = Direction.UP;
     unknown = 'changed';
-    var post = { id: 'post', title: ' ' };
+    const post = { id: 'post', title: ' ', };
     message = '50';
     function getPost(postId) {
         // do something to retrieve post

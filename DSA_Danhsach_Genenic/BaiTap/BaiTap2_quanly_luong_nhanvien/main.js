@@ -1,7 +1,7 @@
 "use strict";
-exports.__esModule = true;
-var StaffManager_1 = require("./StaffManager");
-var staffManager = new StaffManager_1.StaffManager();
+Object.defineProperty(exports, "__esModule", { value: true });
+const StaffManager_1 = require("./StaffManager");
+let staffManager = new StaffManager_1.StaffManager();
 staffManager.insertFirst(1, 6000000);
 staffManager.insertFirst(8, 700000);
 staffManager.insertLast(3, 10000000);

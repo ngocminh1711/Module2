@@ -1,24 +1,24 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.EmployeeManager = void 0;
-var EmployeeManager = /** @class */ (function () {
-    function EmployeeManager() {
+class EmployeeManager {
+    constructor() {
     }
-    EmployeeManager.prototype.getInfo = function () {
+    getInfo() {
         return EmployeeManager.employees;
-    };
-    EmployeeManager.prototype.addEmmployee = function (employee) {
+    }
+    addEmmployee(employee) {
         EmployeeManager.employees.push(employee);
-    };
-    EmployeeManager.prototype["delete"] = function (lastname) {
-        EmployeeManager.employees.forEach(function (employee, index) {
+    }
+    delete(lastname) {
+        EmployeeManager.employees.forEach((employee, index) => {
             if (employee.getLastName() === lastname) {
                 EmployeeManager.employees.splice(index, 1);
             }
         });
-    };
-    EmployeeManager.prototype.update = function (firstname, lastname, birthday, address, position, id) {
-        EmployeeManager.employees.forEach(function (employee, index) {
+    }
+    update(firstname, lastname, birthday, address, position, id) {
+        EmployeeManager.employees.forEach((employee, index) => {
             if (employee.id === id) {
                 employee.setFirstName(firstname);
                 employee.setLastName(lastname);
@@ -27,8 +27,7 @@ var EmployeeManager = /** @class */ (function () {
                 employee.setPosition(position);
             }
         });
-    };
-    EmployeeManager.employees = [];
-    return EmployeeManager;
-}());
+    }
+}
 exports.EmployeeManager = EmployeeManager;
+EmployeeManager.employees = [];

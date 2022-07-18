@@ -1,7 +1,7 @@
 "use strict";
-exports.__esModule = true;
-var LinkedList_1 = require("./LinkedList");
-var linkedList = new LinkedList_1.LinkedList();
+Object.defineProperty(exports, "__esModule", { value: true });
+const LinkedList_1 = require("./LinkedList");
+let linkedList = new LinkedList_1.LinkedList();
 linkedList.insertFirstNode(1);
 linkedList.insertFirstNode(2);
 linkedList.insertFirstNode(3);

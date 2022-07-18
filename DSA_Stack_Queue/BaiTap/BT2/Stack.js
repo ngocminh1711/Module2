@@ -1,19 +1,18 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Stack = void 0;
-var Stack = /** @class */ (function () {
-    function Stack() {
+class Stack {
+    constructor() {
         this.container = [];
     }
-    Stack.prototype.push = function (item) {
+    push(item) {
         this.container.push(item);
-    };
-    Stack.prototype.pop = function () {
+    }
+    pop() {
         return this.container.pop();
-    };
-    Stack.prototype.getSize = function () {
+    }
+    getSize() {
         return this.container.length;
-    };
-    return Stack;
-}());
+    }
+}
 exports.Stack = Stack;

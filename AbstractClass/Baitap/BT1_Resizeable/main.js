@@ -1,24 +1,23 @@
 "use strict";
-exports.__esModule = true;
-var Circle_1 = require("./Circle");
-var Rectangle_1 = require("./Rectangle");
-var Square_1 = require("./Square");
-var shape = [];
-var circle = new Circle_1.Circle('hinh tron', 10);
-var rectangle = new Rectangle_1.Rectangle(20, 30, 'hinh chu nhat');
-var square = new Square_1.Square('hinh vuong', 10);
+Object.defineProperty(exports, "__esModule", { value: true });
+const Circle_1 = require("./Circle");
+const Rectangle_1 = require("./Rectangle");
+const Square_1 = require("./Square");
+let shape = [];
+let circle = new Circle_1.Circle('hinh tron', 10);
+let rectangle = new Rectangle_1.Rectangle(20, 30, 'hinh chu nhat');
+let square = new Square_1.Square('hinh vuong', 10);
 shape.push(circle);
 shape.push(rectangle);
 shape.push(square);
 console.log(shape);
-var percent = (Math.floor(Math.random() * 100) / 100);
+let percent = (Math.floor(Math.random() * 100) / 100);
 // shape.forEach((item,index) => {
 //     if (item instanceof Square) {
 //         console.log(item.howToColor())
 //     }
 // })
-for (var _i = 0, shape_1 = shape; _i < shape_1.length; _i++) {
-    var item = shape_1[_i];
+for (const item of shape) {
     if (item instanceof Square_1.Square) {
         console.log(item.howToColor());
     }

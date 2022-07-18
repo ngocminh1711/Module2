@@ -1,16 +1,15 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Stack = void 0;
-var Stack = /** @class */ (function () {
-    function Stack() {
+class Stack {
+    constructor() {
         this.container = [];
     }
-    Stack.prototype.push = function (data) {
+    push(data) {
         this.container.push(data);
-    };
-    Stack.prototype.pop = function () {
+    }
+    pop() {
         return this.container.pop();
-    };
-    return Stack;
-}());
+    }
+}
 exports.Stack = Stack;

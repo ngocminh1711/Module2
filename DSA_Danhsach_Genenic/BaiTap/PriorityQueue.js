@@ -1,17 +1,17 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.PriorityQueue = void 0;
-var PriorityQueue = /** @class */ (function () {
-    function PriorityQueue() {
+class PriorityQueue {
+    constructor() {
         this.data = [];
     }
-    PriorityQueue.prototype.dequeue = function () {
+    dequeue() {
         if (this.isEmpty()) {
             return null;
         }
-        var min = this.data[0];
-        var minIndex = -1;
-        this.data.forEach(function (item, index) {
+        let min = this.data[0];
+        let minIndex = -1;
+        this.data.forEach((item, index) => {
             if (item[0] < min[0]) {
                 min = item;
                 minIndex = index;
@@ -19,16 +19,15 @@ var PriorityQueue = /** @class */ (function () {
         });
         this.data.splice(minIndex, 1);
         return min[1];
-    };
-    PriorityQueue.prototype.enqueue = function (item, priority) {
+    }
+    enqueue(item, priority) {
         this.data.push([priority, item]);
-    };
-    PriorityQueue.prototype.isEmpty = function () {
+    }
+    isEmpty() {
         return this.data.length === 0;
-    };
-    PriorityQueue.prototype.size = function () {
+    }
+    size() {
         return this.data.length;
-    };
-    return PriorityQueue;
-}());
+    }
+}
 exports.PriorityQueue = PriorityQueue;

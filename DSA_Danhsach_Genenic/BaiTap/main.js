@@ -1,8 +1,8 @@
 "use strict";
-exports.__esModule = true;
-var PriorityQueue_1 = require("./PriorityQueue");
-var priority = new PriorityQueue_1.PriorityQueue();
-var priority1 = new PriorityQueue_1.PriorityQueue();
+Object.defineProperty(exports, "__esModule", { value: true });
+const PriorityQueue_1 = require("./PriorityQueue");
+let priority = new PriorityQueue_1.PriorityQueue();
+let priority1 = new PriorityQueue_1.PriorityQueue();
 priority.enqueue('Ngoc', 1);
 priority.enqueue('Minh', 2);
 // console.log(priority);

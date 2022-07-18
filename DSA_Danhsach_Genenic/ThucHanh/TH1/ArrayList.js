@@ -1,22 +1,21 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.ArrayList = void 0;
-var ArrayList = /** @class */ (function () {
-    function ArrayList() {
+class ArrayList {
+    constructor() {
         this.container = [];
     }
-    ArrayList.prototype.add = function (data) {
+    add(data) {
         this.container.push(data);
-    };
-    ArrayList.prototype.get = function (index) {
+    }
+    get(index) {
         return this.container[index];
-    };
-    ArrayList.prototype.remove = function () {
+    }
+    remove() {
         this.container.pop();
-    };
-    ArrayList.prototype.size = function () {
+    }
+    size() {
         return this.container.length;
-    };
-    return ArrayList;
-}());
+    }
+}
 exports.ArrayList = ArrayList;

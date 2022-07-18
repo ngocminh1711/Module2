@@ -1,37 +1,37 @@
+"use strict";
 var Role;
 (function (Role) {
     Role[Role["admin"] = 1] = "admin";
     Role[Role["user"] = 2] = "user";
 })(Role || (Role = {}));
-var User = /** @class */ (function () {
-    function User(name, email, role) {
+class User {
+    constructor(name, email, role) {
         this.name = name;
         this.email = email;
         this.role = role;
     }
-    User.prototype.getInfo = function () {
-        return ("".concat(this.name, " - ").concat(this.email, " - ").concat(this.role));
-    };
-    User.prototype.setName = function (name) {
+    getInfo() {
+        return (`${this.name} - ${this.email} - ${this.role}`);
+    }
+    setName(name) {
         this.name = name;
-    };
-    User.prototype.setEmail = function (email) {
+    }
+    setEmail(email) {
         this.email = email;
-    };
-    User.prototype.setRole = function (role) {
+    }
+    setRole(role) {
         this.role = role;
-    };
-    User.prototype.isAdmin = function () {
+    }
+    isAdmin() {
         if (this.role == 1) {
-            return ("Admin");
+            return (`Admin`);
         }
         else {
-            return ("User");
+            return (`User`);
         }
-    };
-    return User;
-}());
-var user1 = new User('Ngoc', 'ngocskit@gmail.com', Role.admin);
+    }
+}
+let user1 = new User('Ngoc', 'ngocskit@gmail.com', Role.admin);
 console.log(user1.getInfo());
 console.log(user1.isAdmin());
 user1.setRole(Role.user);

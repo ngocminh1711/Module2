@@ -1,20 +1,20 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Queue = void 0;
-var Queue = /** @class */ (function () {
-    function Queue() {
+class Queue {
+    constructor() {
         this.container = [];
     }
-    Queue.prototype.enqueue = function (data) {
+    enqueue(data) {
         this.container.push(data);
-    };
-    Queue.prototype.dequeue = function () {
+    }
+    dequeue() {
         if (this.isEmpty()) {
             return null;
         }
-        var min = this.container[0];
-        var minIndex = -1;
-        this.container.forEach(function (data, index) {
+        let min = this.container[0];
+        let minIndex = -1;
+        this.container.forEach((data, index) => {
             if (data[0] < min[0]) {
                 min = data;
                 minIndex = index;
@@ -22,10 +22,9 @@ var Queue = /** @class */ (function () {
         });
         this.container.splice(minIndex, 1);
         return min[1];
-    };
-    Queue.prototype.isEmpty = function () {
+    }
+    isEmpty() {
         return this.container.length === 0;
-    };
-    return Queue;
-}());
+    }
+}
 exports.Queue = Queue;

@@ -1,20 +1,19 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Circle = void 0;
-var Circle = /** @class */ (function () {
-    function Circle(radius) {
+class Circle {
+    constructor(radius) {
         this.radius = radius;
     }
-    Circle.prototype.getRadius = function () {
+    getRadius() {
         return this.radius;
-    };
-    Circle.prototype.setRadius = function (radius) {
+    }
+    setRadius(radius) {
         this.radius = radius;
-    };
-    Circle.prototype.toString = function () {
+    }
+    toString() {
         return 'A Circle with radius= '
             + this.getRadius();
-    };
-    return Circle;
-}());
+    }
+}
 exports.Circle = Circle;

@@ -1,10 +1,10 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.FizzBuzz = void 0;
-var FizzBuzz = /** @class */ (function () {
-    function FizzBuzz(n) {
-        var isFizz = n % 5 == 0;
-        var isBuzz = n % 3 == 0;
+class FizzBuzz {
+    constructor(n) {
+        let isFizz = n % 5 == 0;
+        let isBuzz = n % 3 == 0;
         if (isFizz && isBuzz) {
             this.message = 'FizzBuzz';
         }
@@ -18,6 +18,5 @@ var FizzBuzz = /** @class */ (function () {
             this.message = n + '';
         }
     }
-    return FizzBuzz;
-}());
+}
 exports.FizzBuzz = FizzBuzz;

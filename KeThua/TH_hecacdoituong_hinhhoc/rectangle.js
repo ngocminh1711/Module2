@@ -1,58 +1,40 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Rectangle = void 0;
-var Shape_1 = require("./Shape");
-var Rectangle = /** @class */ (function (_super) {
-    __extends(Rectangle, _super);
-    function Rectangle(width, length, color, filled) {
-        var _this = _super.call(this, color, filled) || this;
-        _this.width = 1.0;
-        _this.length = 1.0;
-        _this.width = width;
-        _this.length = length;
-        return _this;
-    }
-    Rectangle.prototype.getWidth = function () {
-        return this.width;
-    };
-    Rectangle.prototype.setWidth = function (width) {
+const Shape_1 = require("./Shape");
+class Rectangle extends Shape_1.Shape {
+    constructor(width, length, color, filled) {
+        super(color, filled);
+        this.width = 1.0;
+        this.length = 1.0;
         this.width = width;
-    };
-    Rectangle.prototype.getLength = function () {
-        return this.length;
-    };
-    Rectangle.prototype.setLength = function (length) {
         this.length = length;
-    };
-    Rectangle.prototype.getArea = function () {
+    }
+    getWidth() {
+        return this.width;
+    }
+    setWidth(width) {
+        this.width = width;
+    }
+    getLength() {
+        return this.length;
+    }
+    setLength(length) {
+        this.length = length;
+    }
+    getArea() {
         return this.width * this.length;
-    };
-    Rectangle.prototype.getPerimeter = function () {
+    }
+    getPerimeter() {
         return 2 * (this.length + this.length);
-    };
-    Rectangle.prototype.toString = function () {
+    }
+    toString() {
         return "A Rectangle with width= "
             + this.getWidth()
             + " and length= "
             + this.getLength()
             + ", which is subclass of "
-            + _super.prototype.toString.call(this);
-    };
-    return Rectangle;
-}(Shape_1.Shape));
+            + super.toString();
+    }
+}
 exports.Rectangle = Rectangle;

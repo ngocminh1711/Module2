@@ -1,45 +1,44 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.LinkedList = void 0;
-var Node_1 = require("../TH2/Node");
-var LinkedList = /** @class */ (function () {
-    function LinkedList() {
+const Node_1 = require("../TH2/Node");
+class LinkedList {
+    constructor() {
         this.head = null;
         this.tail = null;
         this.size = 0;
     }
-    LinkedList.prototype.insertFirstNode = function (data) {
-        var node = new Node_1.Node(data);
+    insertFirstNode(data) {
+        let node = new Node_1.Node(data);
         node.next = this.head;
         this.head = node;
         if (!this.tail) {
             this.tail = node;
         }
         this.size++;
-    };
-    LinkedList.prototype.insertLastNode = function (data) {
+    }
+    insertLastNode(data) {
         if (!this.head) {
             this.insertFirstNode(data);
         }
         else {
-            var node = new Node_1.Node(data);
+            let node = new Node_1.Node(data);
             this.tail.next = node;
             this.tail = node;
             this.size++;
         }
-    };
-    LinkedList.prototype.getSize = function () {
+    }
+    getSize() {
         return this.size;
-    };
-    LinkedList.prototype.readLists = function () {
-        var listData = [];
-        var currentNode = this.head;
+    }
+    readLists() {
+        let listData = [];
+        let currentNode = this.head;
         while (currentNode !== null) {
             listData.push(currentNode.readData());
             currentNode = currentNode.next;
         }
         return listData;
-    };
-    return LinkedList;
-}());
+    }
+}
 exports.LinkedList = LinkedList;

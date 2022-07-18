@@ -1,16 +1,15 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Queue = void 0;
-var Queue = /** @class */ (function () {
-    function Queue() {
+class Queue {
+    constructor() {
         this.container = [];
     }
-    Queue.prototype.enqueue = function (data) {
+    enqueue(data) {
         this.container.push(data);
-    };
-    Queue.prototype.dequeue = function () {
+    }
+    dequeue() {
         return this.container.shift();
-    };
-    return Queue;
-}());
+    }
+}
 exports.Queue = Queue;
