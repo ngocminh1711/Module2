@@ -1,7 +1,7 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const BinaryTree_1 = require("./src/BinaryTree");
-let tree = new BinaryTree_1.BinaryTree();
+exports.__esModule = true;
+var BinaryTree_1 = require("./src/BinaryTree");
+var tree = new BinaryTree_1.BinaryTree();
 tree.insert(5);
 tree.insert(6);
 tree.insert(7);

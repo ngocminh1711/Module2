@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var StudentManagement_1 = require("./StudentManagement");
+var Student_1 = require("./Student");
+var studentManagement = new StudentManagement_1.StudentManagement();
+var student1 = new Student_1.Student(1, 'Ngoc', 29);
+var student2 = new Student_1.Student(2, 'Minh', 30);
+var student3 = new Student_1.Student(3, 'Ngo', 19);
+var student4 = new Student_1.Student(1, 'ngocminh', 29);
+studentManagement.addStudent(student1);
+studentManagement.addStudent(student2);
+studentManagement.addStudent(student3);
+studentManagement.addStudent(student4);
+console.log(studentManagement);
+console.log(studentManagement.findStudentByID(0));

@@ -1,16 +1,16 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.BinaryTree = void 0;
-const TreeNode_1 = require("../TreeNode");
-class BinaryTree {
-    constructor() {
+var TreeNode_1 = require("../TreeNode");
+var BinaryTree = /** @class */ (function () {
+    function BinaryTree() {
         this.root = null;
         this.totalNode = 0;
     }
-    getSize() {
+    BinaryTree.prototype.getSize = function () {
         return this.totalNode;
-    }
-    inorder(node) {
+    };
+    BinaryTree.prototype.inorder = function (node) {
         if (node) {
             console.log(node.data);
             if (node.left) {
@@ -20,16 +20,16 @@ class BinaryTree {
                 this.inorder(node.right);
             }
         }
-    }
-    insert(data) {
+    };
+    BinaryTree.prototype.insert = function (data) {
         if (!this.root) {
             this.root = new TreeNode_1.TreeNode(data);
             this.totalNode++;
             return this.root;
         }
         else {
-            let node = new TreeNode_1.TreeNode(data);
-            let currentNode = this.root;
+            var node = new TreeNode_1.TreeNode(data);
+            var currentNode = this.root;
             while (currentNode) {
                 if (data < currentNode.data) {
                     if (!currentNode.left) {
@@ -49,6 +49,7 @@ class BinaryTree {
             this.totalNode++;
             return currentNode;
         }
-    }
-}
+    };
+    return BinaryTree;
+}());
 exports.BinaryTree = BinaryTree;
