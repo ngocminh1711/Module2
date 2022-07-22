@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var NumberPhoneRegex_1 = require("./NumberPhoneRegex");
+var numberPhoneRegex = new NumberPhoneRegex_1.NumberPhoneRegex();
+var validNumberPhone = "(84)-(0978489648)";
+var invalidNumberPhone = "(a8)-(22222222)";
+var isValid = numberPhoneRegex.validate(validNumberPhone);
+console.log("Account is " + validNumberPhone + " is valid " + isValid);
+var isvalid = numberPhoneRegex.validate(invalidNumberPhone);
+console.log("Account is " + invalidNumberPhone + " is invalid " + isvalid);
